@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         mutualFundId: {
             type: DataTypes.INTEGER,
-            autoIncrement: true,
             allowNull: false,
         },
         name: {

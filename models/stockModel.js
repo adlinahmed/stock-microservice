@@ -24,23 +24,23 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         expenseRatio: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT ,
             allowNull: false
         },
         price: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT,
             allowNull: false
         },
         priceChange: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT,
             allowNull: false
         },
         ytd: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT,
             allowNull: false
         },
         sinceInception: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT,
             allowNull: false
         }
     })

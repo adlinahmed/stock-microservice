@@ -20,19 +20,19 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         lastSale: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.STRING,
             allowNull: false
         },
         netChange: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.STRING,
             allowNull: false
         },
-        percentChange: {
-            type: DataTypes.DECIMAL,
+        changePercent: {
+            type: DataTypes.STRING,
             allowNull: false
         },
         marketCap: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.STRING,
             allowNull: true
         },
         country: {
@@ -59,3 +59,18 @@ module.exports = (sequelize, DataTypes) => {
 
     return Stock
 }
+
+// {
+//     "mutualFundId": ,
+//     "symbol": "",
+//     "name": "",
+//     "lastSale": "",
+//     "netChange": "",
+//     "changePercent": "",
+//     "marketCap": "",
+//     "country": "",
+//     "ipoYear": ,
+//     "volume": ,
+//     "sector": "",
+//     "industry": ""
+// }

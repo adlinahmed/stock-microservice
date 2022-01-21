@@ -11,37 +11,49 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        symbol: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        ticker: {
+        lastSale: {
+            type: DataTypes.FLOAT,
+            allowNull: false
+        },
+        netChange: {
+            type: DataTypes.DECIMAL,
+            allowNull: false
+        },
+        percentChange: {
+            type: DataTypes.DECIMAL,
+            allowNull: false
+        },
+        marketCap: {
+            type: DataTypes.FLOAT,
+            allowNull: true
+        },
+        country: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        assetClass: {
+        ipoYear: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        volume: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        sector: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        expenseRatio: {
-            type: DataTypes.FLOAT ,
-            allowNull: false
-        },
-        price: {
-            type: DataTypes.FLOAT,
-            allowNull: false
-        },
-        priceChange: {
-            type: DataTypes.FLOAT,
-            allowNull: false
-        },
-        ytd: {
-            type: DataTypes.FLOAT,
-            allowNull: false
-        },
-        sinceInception: {
-            type: DataTypes.FLOAT,
-            allowNull: false
+        industry: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
 

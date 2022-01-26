@@ -1,6 +1,6 @@
 const db = require('../models/index')
 
-const Stock = db.Stocks
+const Stock = db.Stock
 const fs = require('fs');
 const path = require('path');
 

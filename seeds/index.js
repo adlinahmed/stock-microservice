@@ -13,7 +13,7 @@ module.exports = function () {
         // console.table (data);
         let arr = data.split (',');
         arr.splice (0,11);
-        console.log (arr);
+        // console.log (arr);
     
         let stocks = [];
         let stock = {};
@@ -34,7 +34,7 @@ module.exports = function () {
             }
             stocks.push(stock);
         } 
-        console.log(stocks)
+        // console.log(stocks)
     
         stocks.forEach((stock) => {
             addStock(stock).then().catch(error => {console.log(error)})
@@ -56,6 +56,7 @@ module.exports = function () {
             industry: incomingStock.industry
         }
         const stock = await Stock.create(input_data)
+        console.log(stock.toJSON())
     }
 }
 

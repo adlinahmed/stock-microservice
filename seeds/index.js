@@ -38,6 +38,7 @@ module.exports = function () {
         stocks.forEach(async(stock) => {
             await Stock.create (stock)
         })
+        .catch(error => (console.log(error)))
     })
 }
 

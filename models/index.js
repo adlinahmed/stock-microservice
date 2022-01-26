@@ -1,5 +1,4 @@
 const dbConfig = require('../config/dbConfig')
-const seeds = require('../seeds/index.js')
 
 const { Sequelize, DataTypes } = require('sequelize')
 
@@ -41,7 +40,6 @@ db.Stocks = require('./stockModel')(sequelize, DataTypes)
 
 db.sequelize.sync({ force: true }).then(() => {
     console.log('DB synced with sequelize')
-    seeds()
 }).catch((error) => {
     console.log('Error syncing the DB to sequelize' + error)
 })

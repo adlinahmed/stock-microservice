@@ -39,20 +39,20 @@ module.exports = function () {
             await addStock(stock)
         })
     })
-    const addStock = async (stock) => {
+    const addStock = async (incomingStock) => {
         let input_data = {
             mutualFundId: null,
-            symbol: stock.symbol,
-            name: stock.name,
-            lastSale: stock.lastSale,
-            netChange: stock.netChange,
-            changePercent: stock.changePercent,
-            marketCap: stock.marketCap,
-            country: stock.country,
-            ipoYear: stock.ipoYear,
-            volume: stock.volume,
-            sector: stock.sector,
-            industry: stock.industry
+            symbol: incomingStock.symbol,
+            name: incomingStock.name,
+            lastSale: incomingStock.lastSale,
+            netChange: incomingStock.netChange,
+            changePercent: incomingStock.changePercent,
+            marketCap: incomingStock.marketCap,
+            country: incomingStock.country,
+            ipoYear: incomingStock.ipoYear,
+            volume: incomingStock.volume,
+            sector: incomingStock.sector,
+            industry: incomingStock.industry
         }
         const stock = await Stock.create(input_data)
     }

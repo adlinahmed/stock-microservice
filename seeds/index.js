@@ -3,11 +3,9 @@ const db = require('../models/index')
 const Stock = db.Stocks
 const fs = require('fs');
 const path = require('path');
-const __dirname = path.resolve(path.dirname(''));
 
 module.exports = function () {
-    console.log(__dirname)
-    fs.readFile (__dirname + '../seeds/stocks.csv', 'utf-8', function(error, data){
+    fs.readFile (path.dirname ('./stocks.csv'), 'utf-8', function(error, data){
         if (error) {
             throw error 
         }

@@ -1,9 +1,4 @@
-const db = require('../models/index.js')
-const { Sequelize, DataTypes } = require('sequelize')
-
-const Stock = db.Stock
-console.log(db, Stock);
-
+const controller = require('../controllers/stockController.js')
 const fs = require('fs');
 const path = require('path');
 
@@ -38,27 +33,10 @@ module.exports = function () {
         } 
         // console.log(stocks)
     
-        stocks.forEach((stock) => {
-            addStock(stock).then().catch(error => {console.log(error)})
+        stocks.forEach((stock) => { 
+            controller.addSeedStock(stock).then().catch(error => {console.log(error)})
         })
     })
-    const addStock = async (incomingStock) => {
-        let input_data = {
-            mutualFundId: null,
-            symbol: incomingStock.symbol,
-            name: incomingStock.name,
-            lastSale: incomingStock.lastSale,
-            netChange: incomingStock.netChange,
-            changePercent: incomingStock.changePercent,
-            marketCap: incomingStock.marketCap,
-            country: incomingStock.country,
-            ipoYear: incomingStock.ipoYear,
-            volume: incomingStock.volume,
-            sector: incomingStock.sector,
-            industry: incomingStock.industry
-        }
-        const stock = await Stock.create(input_data)
-        // console.log(stock.toJSON())
-    }
+
 }
 

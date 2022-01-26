@@ -21,6 +21,25 @@ const addStock = async (req,res) => {
     res.status(200).send(stock)
 }
 
+const addSeedStock = async (incomingStock) => {
+    let input_data = {
+        mutualFundId: null,
+        symbol: incomingStock.symbol,
+        name: incomingStock.name,
+        lastSale: incomingStock.lastSale,
+        netChange: incomingStock.netChange,
+        changePercent: incomingStock.changePercent,
+        marketCap: incomingStock.marketCap,
+        country: incomingStock.country,
+        ipoYear: incomingStock.ipoYear,
+        volume: incomingStock.volume,
+        sector: incomingStock.sector,
+        industry: incomingStock.industry
+    }
+    const stock = await Stock.create(input_data)
+    // console.log(stock.toJSON())
+}
+
 const getAllStocks = async (req, res) => {
 
     let stocks = await Stock.findAll({})
@@ -51,6 +70,7 @@ const deleteStock = async (req, res) => {
 
 module.exports = {
     addStock,
+    addSeedStock,
     getAllStocks,
     getOneStock,
     updateStock,

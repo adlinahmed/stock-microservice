@@ -1,7 +1,9 @@
-const db = require('../models/index')
+const db = require('../models/index.js')
 const { Sequelize, DataTypes } = require('sequelize')
 
 const Stock = db.Stock
+console.log(db, Stock);
+
 const fs = require('fs');
 const path = require('path');
 
@@ -56,7 +58,7 @@ module.exports = function () {
             industry: incomingStock.industry
         }
         const stock = await Stock.create(input_data)
-        console.log(stock.toJSON())
+        // console.log(stock.toJSON())
     }
 }
 

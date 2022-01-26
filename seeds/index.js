@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = function () {
-    fs.readFile (path.dirname ('./stocks.csv'), 'utf-8', function(error, data){
+    fs.readFile (__dirname+'stocks.csv', 'utf-8', function(error, data){
         if (error) {
             throw error 
         }

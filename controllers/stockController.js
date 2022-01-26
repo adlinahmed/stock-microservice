@@ -5,14 +5,17 @@ const Stock = db.Stocks
 const addStock = async (req,res) => {
     let input_data = {
         mutualFundId: req.body.mutualFundId,
+        symbol: req.body.symbol,
         name: req.body.name,
-        ticker: req.body.ticker,
-        assetClass: req.body.assetClass,
-        expenseRatio: req.body.expenseRatio,
-        price: req.body.price,
-        priceChange: req.body.priceChange,
-        ytd: req.body.ytd,
-        sinceInception: req.body.sinceInception
+        lastSale: req.body.lastSale,
+        netChange: req.body.netChange,
+        changePercent: req.body.changePercent,
+        marketCap: req.body.marketCap,
+        country: req.body.country,
+        ipoYear: req.body.ipoYear,
+        volume: req.body.volume,
+        sector: req.body.sector,
+        industry: req.body.industry
     }
     const stock = await Stock.create(input_data)
     res.status(200).send(stock)

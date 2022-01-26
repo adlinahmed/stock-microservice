@@ -35,8 +35,8 @@ module.exports = function () {
         } 
         console.log(stocks)
     
-        stocks.forEach(async(stock) => {
-            await addStock(stock)
+        stocks.forEach((stock) => {
+            addStock(stock).then().catch(error => {console.log(error)})
         })
     })
     const addStock = async (incomingStock) => {

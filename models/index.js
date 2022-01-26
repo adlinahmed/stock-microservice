@@ -1,5 +1,6 @@
 const dbConfig = require('../config/dbConfig')
 const seeds = require('../seeds/index.js')
+
 const { Sequelize, DataTypes } = require('sequelize')
 
 let sequelize = null;

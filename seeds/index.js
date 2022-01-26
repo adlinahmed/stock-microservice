@@ -1,4 +1,5 @@
 const db = require('../models/index')
+const { Sequelize, DataTypes } = require('sequelize')
 
 const Stock = db.Stock
 const fs = require('fs');

@@ -69,10 +69,10 @@ const deleteStock = async (req, res) => {
 }
 
 module.exports = {
-    addStock,
-    addSeedStock,
-    getAllStocks,
-    getOneStock,
-    updateStock,
-    deleteStock
+    addStock : addStock,
+    addSeedStock : addSeedStock,
+    getAllStocks : getAllStocks,
+    getOneStock : getOneStock,
+    updateStock : updateStock,
+    deleteStock : deleteStock
 }

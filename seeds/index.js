@@ -31,6 +31,8 @@ module.exports = function () {
             }
             stocks.push(stock);
         } 
+
+        console.log(controller)
         console.log(Object.keys(controller))
         console.log(controller.addSeedStock)
         // console.log(stocks)

@@ -2,7 +2,6 @@ const controller = require('../controllers/stockController.js')
 const fs = require('fs');
 const path = require('path');
 
-module.exports = function () {
     fs.readFile (__dirname+'/'+'stocks.csv', 'utf-8', function(error, data){
         if (error) {
             throw error 
@@ -42,5 +41,4 @@ module.exports = function () {
         })
     })
 
-}
 

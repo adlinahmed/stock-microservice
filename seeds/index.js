@@ -36,8 +36,25 @@ module.exports = function () {
         console.log(stocks)
     
         stocks.forEach(async(stock) => {
-            await Stock.create (stock).catch(error => (console.log(error)))
+            await addStock(stock)
         })
     })
+    const addStock = async (stock) => {
+        let input_data = {
+            mutualFundId: null,
+            symbol: stock.symbol,
+            name: stock.name,
+            lastSale: stock.lastSale,
+            netChange: stock.netChange,
+            changePercent: stock.changePercent,
+            marketCap: stock.marketCap,
+            country: stock.country,
+            ipoYear: stock.ipoYear,
+            volume: stock.volume,
+            sector: stock.sector,
+            industry: stock.industry
+        }
+        const stock = await Stock.create(input_data)
+    }
 }
 

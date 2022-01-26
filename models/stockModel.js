@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         mutualFundId: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         symbol: {
             type: DataTypes.STRING,

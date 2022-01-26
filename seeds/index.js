@@ -4,7 +4,7 @@ const Stock = db.Stocks
 const fs = require('fs');
 
 module.exports = function () {
-    fs.readFile ('./stocks.csv', 'utf-8', function(error, data){
+    fs.readFile ('../seeds/stocks.csv', 'utf-8', function(error, data){
         if (error) {
             throw error 
         }

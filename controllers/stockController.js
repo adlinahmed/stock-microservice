@@ -1,6 +1,8 @@
 const db = require('../models/index')
 
-const Stock = db.stocks
+const Stock = db.stock
+
+console.log(db)
 
 const addStock = async (req,res) => {
     let input_data = {

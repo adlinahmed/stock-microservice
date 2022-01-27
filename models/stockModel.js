@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const Stock = sequelize.define('Stocks', {
+    const Stock = sequelize.define('stocks', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -58,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
     }, 
     
     {
-        tableName: 'Stocks',
+        tableName: 'stocks',
         freezeTableName: true,
         schema: 'public'
     })

@@ -40,11 +40,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         },
         ipoYear: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true
         },
         volume: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true
         },
         sector: {

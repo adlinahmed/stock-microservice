@@ -25,7 +25,7 @@ const addStock = async (req,res) => {
 
 const addSeedStock = async (incomingStock) => {
     let input_data = {
-        mutualFundId: null,
+        mutualFundId: ~~(Math.random() * 130 + 1),
         symbol: incomingStock.symbol,
         name: incomingStock.name,
         lastSale: incomingStock.lastSale,

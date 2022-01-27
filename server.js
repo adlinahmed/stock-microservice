@@ -1,3 +1,5 @@
+const cors = require('cors')
+
 
 const express =  require('express')
 const app = express()
@@ -7,6 +9,10 @@ app.use(express.json())
 
 const routers = require('./routes/stockRouter.js')
 app.use('/stocks', routers)
+
+app.use(cors({
+    origin: '*'
+}))
 
 app.get('/', (req, res) => {
     res.send('this is my stocks microservice')

@@ -36,9 +36,9 @@ const path = require('path');
         console.log(controller.addSeedStock)
         // console.log(stocks)
     
-        stocks.forEach((stock) => { 
-            controller.addSeedStock(stock).then().catch(error => {console.log(error)})
-        })
+        // stocks.forEach((stock) => { 
+        //     controller.addSeedStock(stock).then().catch(error => {console.log(error)})
+        // })
     })
 
 

@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const Stock = sequelize.define('public."Stocks"', {
+    const Stock = sequelize.define('Stocks', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -55,6 +55,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true
         }
+    }, 
+    
+    {
+        tableName: 'Stocks',
+        freezeTableName: true,
+        schema: 'public'
     })
 
     return Stock

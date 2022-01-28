@@ -61,7 +61,7 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'stocks',
         freezeTableName: true,
         schema: 'public'
-    })
+    });
 
     return Stock
 }

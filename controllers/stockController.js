@@ -24,8 +24,8 @@ const addStock = async (req,res) => {
 }
 
 var mutualFundIds = [];
+for (var i = 0; i < 252; i++) mutualFundIds.push([]);
 for (var i = 0; i < 130; i++) {
-    mutualFundIds.push([]);
     const stockCount = 4 + ~~(Math.random() * 5);
     for (var j = 0; j < stockCount; j++) {
         const r = ~~(Math.random() * 252);

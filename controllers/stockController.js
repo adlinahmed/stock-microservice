@@ -23,9 +23,19 @@ const addStock = async (req,res) => {
     res.status(200).send(stock)
 }
 
-const addSeedStock = async (incomingStock) => {
+const mutualFundIds = Array(252).fill([]);
+for (var i = 0; i < 130; i++) {
+    const stockCount = 4 + ~~(Math.random() * 5);
+    for (var j = 0; j < stockCount; j++) {
+        const r = ~~(Math.random() * 252);
+        if (!mutualFunds[r].includes(i)) mutualFundIds[r].push(i);
+        else j--;
+    }
+}
+
+const addSeedStock = async (incomingStock, i) => {
     let input_data = {
-        mutualFundId: ~~(Math.random() * 130 + 1),
+        mutualFundIds: mutualFundIds[i],
         symbol: incomingStock.symbol,
         name: incomingStock.name,
         lastSale: incomingStock.lastSale,

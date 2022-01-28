@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             primaryKey: true
         },
-        mutualFundId: {
-            type: DataTypes.INTEGER,
+        mutualFundIds: {
+            type: DataTypes.STRING,
             allowNull: true,
         },
         symbol: {

@@ -33,7 +33,10 @@ for (var i = 0; i < 130; i++) {
     }
 }
 
+console.log('MutualFundIds: ' + mutualFundIds);
+
 const addSeedStock = async (incomingStock, i) => {
+    console.log(i + ', ' + mutualFundIds[i]);
     let input_data = {
         mutualFundIds: mutualFundIds[i].join(','),
         symbol: incomingStock.symbol,

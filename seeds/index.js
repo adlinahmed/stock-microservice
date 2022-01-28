@@ -30,11 +30,6 @@ const path = require('path');
             }
             stocks.push(stock);
         } 
-
-        console.log(controller)
-        console.log(Object.keys(controller))
-        console.log(controller.addSeedStock)
-        // console.log(stocks)
     
         stocks.forEach((stock, i) => { 
             controller.addSeedStock(stock, i).then().catch(error => {console.log(error)})

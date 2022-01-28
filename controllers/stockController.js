@@ -29,7 +29,7 @@ for (var i = 0; i < 130; i++) {
     for (var j = 0; j < stockCount; j++) {
         const r = ~~(Math.random() * 252);
         if (!mutualFundIds[r].includes(i)) mutualFundIds[r].push(i);
-        else j--;
+        //else j--;
     }
 }
 

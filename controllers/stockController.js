@@ -28,14 +28,14 @@ for (var i = 0; i < 130; i++) {
     const stockCount = 4 + ~~(Math.random() * 5);
     for (var j = 0; j < stockCount; j++) {
         const r = ~~(Math.random() * 252);
-        if (!mutualFunds[r].includes(i)) mutualFundIds[r].push(i);
+        if (!mutualFundIds[r].includes(i)) mutualFundIds[r].push(i);
         else j--;
     }
 }
 
 const addSeedStock = async (incomingStock, i) => {
     let input_data = {
-        mutualFundIds: mutualFundIds[i],
+        mutualFundIds: mutualFundIds[i].join(','),
         symbol: incomingStock.symbol,
         name: incomingStock.name,
         lastSale: incomingStock.lastSale,
